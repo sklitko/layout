@@ -1,0 +1,2 @@
+open app/index.html
+

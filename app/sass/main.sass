@@ -1,0 +1,114 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+header
+	height: 35px
+	border: 1px solid
+	width: 100%
+	position: fixed
+	ul
+		padding: 0
+		margin: 0
+		margin-left: 10px
+
+		li:not(:last-child):after
+			content: "|"
+			margin-left: 5px
+		li
+			display: inline-block
+			a
+				text-decoration: underline
+aside
+	top: 35px
+	width: 300px
+	border: 1px solid
+	overflow: auto
+	position: fixed
+
+	ul
+		height: 700px
+		list-style-type: none
+		padding-left: 10px
+	.fa
+		padding-right: 3px
+
+main
+	margin-left: 300px
+	.breadcrumbs_block
+		position: fixed
+		top: 35px
+		height: 35px
+		border: 1px solid
+		width: 100%
+		.breadcrumbs
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+				a
+					text-decoration: underline
+			li::before
+				content: '>'
+				margin-left: 5px
+				margin-right: 5px
+				color: #7f7f7f
+			li:first-child::before
+				content: ''
+	.wrap
+		position: relative
+		top: 70px
+		overflow: auto
+		height: 88vh
+		display: flex
+		justify-content: space-around
+		flex-flow: row wrap
+		.box
+			width: 250px
+			text-align: center
+			margin-top: 10px
+
+
+@import "media" // Всегда в конце
+
